@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cine Aurora — Cinema de verdade, no coração da cidade</title>
+<meta name="description" content="Cinema de rua com curadoria em São Paulo: clássicos restaurados, cult e lançamentos independentes. Sessões especiais, café e bar próprios. Rua dos Andradas, 412 — Centro.">
+<meta name="theme-color" content="#0C0905">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Cine Aurora">
+<meta property="og:title" content="Cine Aurora — Cinema de verdade, no coração da cidade">
+<meta property="og:description" content="Filmes que ficam. Numa sala que respeita o cinema — e quem vai assisti-lo.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:url" content="https://cineaurora.com.br/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cine Aurora — Cinema de verdade, no coração da cidade">
+<meta name="twitter:description" content="Filmes que ficam. Numa sala que respeita o cinema — e quem vai assisti-lo.">
+<meta name="twitter:image" content="assets/hero.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230C0905'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23E9A934' stroke-width='2'/%3E%3Ccircle cx='16' cy='11' r='2' fill='%23E9A934'/%3E%3Ccircle cx='16' cy='21' r='2' fill='%23E9A934'/%3E%3Ccircle cx='11' cy='16' r='2' fill='%23E9A934'/%3E%3Ccircle cx='21' cy='16' r='2' fill='%23E9A934'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#em-cartaz">Pular para o conteúdo</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#topo" aria-label="Cine Aurora — início">
+      <svg class="nav__reel" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <circle cx="16" cy="16" r="10.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="16" cy="10.5" r="2.1" fill="currentColor"/>
+        <circle cx="16" cy="21.5" r="2.1" fill="currentColor"/>
+        <circle cx="10.5" cy="16" r="2.1" fill="currentColor"/>
+        <circle cx="21.5" cy="16" r="2.1" fill="currentColor"/>
+      </svg>
+      <span>Cine Aurora</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#em-cartaz">Em Cartaz</a>
+      <a href="#sessoes-especiais">Sessões Especiais</a>
+      <a href="#nossa-historia">Nossa História</a>
+      <a href="#o-cafe">O Café</a>
+      <a href="#ingressos">Ingressos</a>
+    </nav>
+
+    <a class="btn btn--primary btn--sm nav__cta" href="#ingressos">Comprar ingresso</a>
+
+    <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Abrir menu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="nav__drawer" id="nav-drawer" hidden>
+    <a href="#em-cartaz">Em Cartaz</a>
+    <a href="#sessoes-especiais">Sessões Especiais</a>
+    <a href="#nossa-historia">Nossa História</a>
+    <a href="#o-cafe">O Café</a>
+    <a href="#ingressos">Ingressos</a>
+    <a class="btn btn--primary" href="#ingressos">Comprar ingresso</a>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="hero grain" aria-labelledby="hero-title">
+    <div class="hero__media" aria-hidden="true">
+      <img src="assets/hero.jpg" alt="" id="hero-img" fetchpriority="high" decoding="async">
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--hero">Rua dos Andradas, 412 · São Paulo · desde 1987</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span>Cinema de verdade,</span></span>
+        <span class="line"><span>no coração da cidade.</span></span>
+      </h1>
+      <p class="hero__sub">Filmes que ficam. Numa sala que respeita o cinema — e quem vai assisti-lo.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#em-cartaz">Ver o que está em cartaz</a>
+        <a class="btn btn--ghost" href="#sessoes-especiais">Conhecer nossas sessões especiais</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-label">Role</span>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ────────────────────────────────────────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marquee-track">
+      <span class="marquee__group">
+        <b>◈</b> Cine Aurora <b>·</b> Filmes que ficam <b>·</b> Sessões especiais <b>·</b> Cinema de verdade
+        <b>·</b> Projetor analógico desde 1987 <b>·</b> Café aberto até 23h
+      </span>
+      <span class="marquee__group">
+        <b>◈</b> Cine Aurora <b>·</b> Filmes que ficam <b>·</b> Sessões especiais <b>·</b> Cinema de verdade
+        <b>·</b> Projetor analógico desde 1987 <b>·</b> Café aberto até 23h
+      </span>
+    </div>
+  </div>
+
+  <!-- ── EM CARTAZ ──────────────────────────────────────── -->
+  <section class="section" id="em-cartaz" aria-labelledby="em-cartaz-title">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow">Programa da semana</p>
+        <h2 class="section__title" id="em-cartaz-title">Em Cartaz esta semana</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <ul class="films" role="list">
+
+        <li class="film reveal" data-stagger="0">
+          <article>
+            <div class="film__poster">
+              <img src="assets/poster-1.jpg" alt="Pôster do filme A Última Luz de Agosto, dirigido por Clara Drummond" loading="lazy" decoding="async" width="896" height="1200">
+              <span class="film__year" aria-hidden="true">2023</span>
+            </div>
+            <div class="film__body">
+              <p class="film__meta">Drama · Independente brasileiro</p>
+              <h3 class="film__title">A Última Luz de Agosto</h3>
+              <p class="film__director">Direção: Clara Drummond <span aria-hidden="true">·</span> <span class="sr-only">Ano: </span>2023</p>
+              <p class="film__synopsis">Uma professora aposentada retorna à cidade do interior onde cresceu para vender a casa da família e encontra, nas cartas esquecidas de uma gaveta, a história que sempre evitou encarar. Estréia nacional — vencedor do prêmio do júri no Festival de Tiradentes.</p>
+              <ul class="badges" role="list" aria-label="Sessões de A Última Luz de Agosto">
+                <li class="badge">Qui–Dom · 16h</li>
+                <li class="badge">Sex–Sáb · 20h</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li class="film reveal" data-stagger="1">
+          <article>
+            <div class="film__poster">
+              <img src="assets/poster-2.jpg" alt="Pôster do filme Vertiges, dirigido por Sophie Marchand" loading="lazy" decoding="async" width="896" height="1200">
+              <span class="film__year" aria-hidden="true">1962</span>
+            </div>
+            <div class="film__body">
+              <p class="film__meta">Suspense · Nouvelle Vague</p>
+              <h3 class="film__title">Vertiges</h3>
+              <p class="film__director">Direção: Sophie Marchand <span aria-hidden="true">·</span> 1962 (restauro 4K, 2022)</p>
+              <p class="film__synopsis">Uma dançarina de cabaré em Paris recebe cartas anônimas que reconstroem, fotograma a fotograma, a noite em que seu amante desapareceu. Restauro autorizado pela Cinémathèque Française — na tela grande como nunca antes.</p>
+              <ul class="badges" role="list" aria-label="Sessões de Vertiges">
+                <li class="badge">Qui e Sáb · 18h30</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li class="film reveal" data-stagger="2">
+          <article>
+            <div class="film__poster">
+              <img src="assets/poster-3.jpg" alt="Pôster do filme O Homem que Plantava Sombras, dirigido por Renata Uchôa" loading="lazy" decoding="async" width="896" height="1200">
+              <span class="film__year" aria-hidden="true">2024</span>
+            </div>
+            <div class="film__body">
+              <p class="film__meta">Ficção científica · Cult</p>
+              <h3 class="film__title">O Homem que Plantava Sombras</h3>
+              <p class="film__director">Direção: Renata Uchôa <span aria-hidden="true">·</span> 2024</p>
+              <p class="film__synopsis">Em 2041, um engenheiro climático descobre que o algoritmo que controla o clima global foi programado por alguém que morreu trinta anos antes. Thriller de ideias filmado inteiramente no Cerrado.</p>
+              <ul class="badges" role="list" aria-label="Sessões de O Homem que Plantava Sombras">
+                <li class="badge">Sex · 21h30</li>
+                <li class="badge">Dom · 19h</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li class="film reveal" data-stagger="3">
+          <article>
+            <div class="film__poster">
+              <img src="assets/poster-4.jpg" alt="Pôster do filme Corpo Estranho, dirigido por Amos Feldman" loading="lazy" decoding="async" width="896" height="1200">
+              <span class="film__year" aria-hidden="true">2023</span>
+            </div>
+            <div class="film__body">
+              <p class="film__meta">Drama · Israel</p>
+              <h3 class="film__title">Corpo Estranho</h3>
+              <p class="film__director">Direção: Amos Feldman <span aria-hidden="true">·</span> 2023</p>
+              <p class="film__synopsis">Um cirurgião em Tel Aviv recebe o coração de um doador desconhecido — e começa a sonhar com memórias que não são suas. Seleção Oficial de Berlim 2023, Prêmio FIPRESCI.</p>
+              <ul class="badges" role="list" aria-label="Sessões de Corpo Estranho">
+                <li class="badge">Qua–Dom · 17h</li>
+                <li class="badge">Sex–Sáb · 21h</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── SESSÕES ESPECIAIS (ledger) ─────────────────────── -->
+  <section class="section section--special" id="sessoes-especiais" aria-labelledby="especiais-title">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow">Agenda</p>
+        <h2 class="section__title" id="especiais-title">Além da sessão comum</h2>
+        <p class="section__lede">Programas que transformam ir ao cinema em um evento.</p>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <ul class="ledger" role="list">
+        <li class="ledger__row reveal" data-stagger="0">
+          <p class="ledger__index" aria-hidden="true">01</p>
+          <div class="ledger__main">
+            <p class="ledger__kicker">Sessão Madrugada</p>
+            <h3 class="ledger__name">Aurora às 00h</h3>
+            <p class="ledger__desc">Toda última sexta do mês, a Aurora abre as portas à meia-noite. Programação surpresa — clássico cult, raridade ou estreia internacional. Você só descobre o título quando as luzes apagam. Bar aberto, ingressos limitados.</p>
+          </div>
+          <p class="ledger__when">Última sexta de cada mês<span>00h00 — portas abrem às 23h30</span></p>
+        </li>
+
+        <li class="ledger__row reveal" data-stagger="1">
+          <p class="ledger__index" aria-hidden="true">02</p>
+          <div class="ledger__main">
+            <p class="ledger__kicker">Cine Debate</p>
+            <h3 class="ledger__name">Filme + Palavra</h3>
+            <p class="ledger__desc">Após a exibição, o diretor, roteirista ou crítico convidado fica em cena para uma conversa aberta com o público. Sem moderador corporativo — só perguntas de verdade e respostas honestas.</p>
+          </div>
+          <p class="ledger__when">Quinzenalmente às quartas-feiras<span>19h — sessão + debate pós-filme</span></p>
+        </li>
+
+        <li class="ledger__row reveal" data-stagger="2">
+          <p class="ledger__index" aria-hidden="true">03</p>
+          <div class="ledger__main">
+            <p class="ledger__kicker">Mostra do Mês</p>
+            <h3 class="ledger__name">Mostra Aurora — Julho: Corpos em Movimento</h3>
+            <p class="ledger__desc">Todo mês, um tema. Em julho, filmes que colocam o corpo humano em cena como linguagem — dança, esporte, performance, dor. Curadoria da crítica Laís Ventura, com textos no nosso programa impresso.</p>
+          </div>
+          <p class="ledger__when">4 a 27 de julho<span>Programação completa no site e no balcão</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── NOSSA HISTÓRIA ─────────────────────────────────── -->
+  <section class="section" id="nossa-historia" aria-labelledby="historia-title">
+    <div class="wrap story">
+      <figure class="story__figure reveal">
+        <img src="assets/sala.jpg" alt="Sala de projeção do Cine Aurora, com poltronas de veludo e pé-direito alto" loading="lazy" decoding="async" width="1200" height="896">
+        <figcaption>A sala principal — veludo novo, pé-direito de 1987.</figcaption>
+      </figure>
+
+      <div class="story__text reveal">
+        <p class="eyebrow">Desde 1987</p>
+        <h2 class="section__title" id="historia-title">Nossa História</h2>
+        <p>O Cine Aurora abriu as portas em 1987, numa esquina que a cidade inteira conhecia pelo cheiro de pipoca e pelo pôster enorme de papel colado à mão. Por muitos anos foi multiplex, foi bingo, quase foi estacionamento. Em 2019, um grupo de cinéfilos que cresceu nessa sala decidiu que não ia deixar a história acabar assim.</p>
+        <p>Reformamos o que precisava ser reformado, preservamos o que precisava ser preservado. O veludo das poltronas é novo; o pé-direito alto, a marquise art déco e o projetor analógico que ainda usamos nas sessões especiais são os mesmos de sempre.</p>
+        <p class="story__closing">Não temos franquia, não temos cotas de exibição obrigatória, não temos tela de shopping. O que temos é uma curadoria feita com cuidado, um café que você vai querer ficar depois do filme e uma convicção simples: <em>cinema bom merece uma boa sala.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── O CAFÉ ─────────────────────────────────────────── -->
+  <section class="section section--cafe" id="o-cafe" aria-labelledby="cafe-title">
+    <div class="wrap cafe">
+      <div class="cafe__text reveal">
+        <p class="eyebrow">Antes, durante e depois</p>
+        <h2 class="section__title" id="cafe-title">O Café Aurora</h2>
+        <p class="cafe__lede">Funciona antes, durante e depois de cada sessão. O cardápio foi pensado para quem quer uma taça de vinho sem pressa antes do filme, um espresso forte no intervalo ou uma cerveja artesanal enquanto ainda está processando o que acabou de ver. Ingredientes locais, receitas sem frescura, preços honestos.</p>
+
+        <ul class="menu" role="list">
+          <li class="menu__item">
+            <div class="menu__line">
+              <h3 class="menu__name">Taça de Vinho Aurora</h3>
+              <span class="menu__dots" aria-hidden="true"></span>
+              <p class="menu__price">R$ 22,00</p>
+            </div>
+            <p class="menu__desc">Seleção rotativa de vinhos naturais de pequenos produtores brasileiros e portugueses.</p>
+          </li>
+          <li class="menu__item">
+            <div class="menu__line">
+              <h3 class="menu__name">Sanduíche de Presunto Cru com Brie</h3>
+              <span class="menu__dots" aria-hidden="true"></span>
+              <p class="menu__price">R$ 28,00</p>
+            </div>
+            <p class="menu__desc">No pão de fermentação natural da padaria Maristela, mostarda de Dijon, rúcula. Feito na hora.</p>
+          </li>
+          <li class="menu__item">
+            <div class="menu__line">
+              <h3 class="menu__name">Brownie Noir</h3>
+              <span class="menu__dots" aria-hidden="true"></span>
+              <p class="menu__price">R$ 14,00</p>
+            </div>
+            <p class="menu__desc">Chocolate 70%, flor de sal, servido morno. O favorito de quem chega cedo demais.</p>
+          </li>
+        </ul>
+      </div>
+
+      <figure class="cafe__figure reveal">
+        <img src="assets/cafe.jpg" alt="Balcão do Café Aurora, com luz âmbar e garrafas ao fundo" loading="lazy" decoding="async" width="1200" height="896">
+        <figcaption>Café Aurora — qua a dom, das 15h às 23h.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ── INGRESSOS ──────────────────────────────────────── -->
+  <section class="section section--tickets" id="ingressos" aria-labelledby="ingressos-title">
+    <div class="wrap">
+      <header class="section__head section__head--center reveal">
+        <p class="eyebrow">Bilheteria</p>
+        <h2 class="section__title" id="ingressos-title">Ingressos</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <ul class="plans" role="list">
+        <li class="plan reveal" data-stagger="0">
+          <div class="plan__head">
+            <h3 class="plan__name">Inteira</h3>
+            <p class="plan__price"><span class="plan__currency">R$</span>32,00</p>
+          </div>
+          <p class="plan__desc">Acesso à sessão. Válido para qualquer filme em cartaz.</p>
+          <a class="btn btn--ghost btn--block" href="https://wa.me/5511932047890?text=Ol%C3%A1%2C%20quero%20comprar%20um%20ingresso%20inteira%20no%20Cine%20Aurora." target="_blank" rel="noopener">Comprar inteira</a>
+        </li>
+
+        <li class="plan plan--featured reveal" data-stagger="1">
+          <p class="plan__flag">Mais escolhido</p>
+          <div class="plan__head">
+            <h3 class="plan__name">Sócio Aurora <span class="plan__note">carnê mensal</span></h3>
+            <p class="plan__price"><span class="plan__currency">R$</span>59,00<span class="plan__period">/mês</span></p>
+          </div>
+          <p class="plan__desc">Ingresso ilimitado em todas as sessões regulares + 20% de desconto no Café Aurora + acesso prioritário às Sessões Especiais + programa impresso mensal.</p>
+          <a class="btn btn--primary btn--block" href="https://wa.me/5511932047890?text=Ol%C3%A1%2C%20quero%20virar%20S%C3%B3cio%20Aurora%20(carn%C3%AA%20mensal)." target="_blank" rel="noopener">Virar Sócio Aurora</a>
+          <p class="plan__fine">Plano mensal, sem fidelidade mínima. Cancele quando quiser.</p>
+        </li>
+
+        <li class="plan reveal" data-stagger="2">
+          <div class="plan__head">
+            <h3 class="plan__name">Meia-entrada</h3>
+            <p class="plan__price"><span class="plan__currency">R$</span>16,00</p>
+          </div>
+          <p class="plan__desc">Estudantes, professores da rede pública, maiores de 60 anos e pessoas com deficiência — mediante apresentação de documento.</p>
+          <a class="btn btn--ghost btn--block" href="https://wa.me/5511932047890?text=Ol%C3%A1%2C%20quero%20comprar%20um%20ingresso%20meia-entrada%20no%20Cine%20Aurora." target="_blank" rel="noopener">Comprar meia</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── DEPOIMENTOS ────────────────────────────────────── -->
+  <section class="section section--voices" aria-labelledby="depoimentos-title">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="eyebrow">Depoimentos</p>
+        <h2 class="section__title" id="depoimentos-title">Quem já veio, voltou</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <ul class="voices" role="list">
+        <li class="voice reveal" data-stagger="0">
+          <figure>
+            <blockquote><p>“Fui ver <cite>Vertiges</cite> e fiquei até o fim dos créditos — pela primeira vez em anos. A sala tem aquele silêncio que faz diferença.”</p></blockquote>
+            <figcaption>Fernanda T., 34 anos</figcaption>
+          </figure>
+        </li>
+        <li class="voice reveal" data-stagger="1">
+          <figure>
+            <blockquote><p>“Fiz o carnê de sócio achando que ia usar duas vezes por mês. Venho toda semana. O café tem uma culpa enorme nisso.”</p></blockquote>
+            <figcaption>Rodrigo M., 41 anos</figcaption>
+          </figure>
+        </li>
+        <li class="voice reveal" data-stagger="2">
+          <figure>
+            <blockquote><p>“O Cine Debate sobre <cite>A Última Luz de Agosto</cite> foi melhor que qualquer aula que já assisti sobre cinema brasileiro. Saí de lá com vontade de fazer um filme.”</p></blockquote>
+            <figcaption>Isadora P., 27 anos</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ──────────────────────────────────────── -->
+  <section class="cta grain" aria-labelledby="cta-title">
+    <div class="wrap cta__inner reveal">
+      <h2 class="cta__title" id="cta-title">A próxima sessão começa em breve.</h2>
+      <p class="cta__text">Reserve seu ingresso ou vire sócio Aurora. A sala vai estar pronta.</p>
+      <a class="btn btn--primary btn--lg" href="https://wa.me/5511932047890?text=Ol%C3%A1%2C%20quero%20comprar%20um%20ingresso%20no%20Cine%20Aurora." target="_blank" rel="noopener">Comprar ingresso agora</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ───────────────────────────────────────────── -->
+<footer class="footer" aria-labelledby="footer-title">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <p class="footer__logo" id="footer-title">Cine Aurora</p>
+      <p class="footer__tagline">Cinema de verdade, no coração da cidade.</p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__head">Endereço</h2>
+      <address>
+        Rua dos Andradas, 412 — Centro<br>
+        São Paulo – SP, CEP 01208-000
+      </address>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__head">Horários de funcionamento</h2>
+      <p>Quarta a domingo — sessões a partir das 16h</p>
+      <p>Café Aurora: qua–dom das 15h às 23h</p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__head">Contato</h2>
+      <p><a href="mailto:contato@cineaurora.com.br">contato@cineaurora.com.br</a></p>
+      <p><a href="tel:+551132047890">(11) 3204-7890</a></p>
+      <p><a href="https://wa.me/5511932047890" target="_blank" rel="noopener">WhatsApp (apenas reservas)</a></p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__head">Redes sociais</h2>
+      <p><a href="https://instagram.com/cineaurora" target="_blank" rel="noopener">Instagram @cineaurora</a></p>
+      <p><a href="https://letterboxd.com/cineaurora" target="_blank" rel="noopener">Letterboxd cineaurora</a></p>
+      <p><a href="https://cineaurora.com.br/newsletter">Newsletter — assine aqui</a></p>
+    </div>
+  </div>
+
+  <div class="wrap footer__legal">
+    <p>© 2024 Cine Aurora. Todos os direitos reservados. Meia-entrada conforme Lei Federal nº 12.933/2013. Classificação indicativa exibida em cada sessão.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
